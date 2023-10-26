@@ -25,7 +25,7 @@
         .container {
             background-color: #ffffff;
             width: 100%;
-            height: 180vh;
+            height: 250vh;
             padding: 0px;
             margin: 0 auto; 
         }
@@ -35,7 +35,7 @@
             background-color: hsl(193, 100%, 96%);
             background-image: url('./images/bg-hero-desktop.svg');
             background-size: auto;
-            height: 270px; 
+            height: 400px; 
             text-align: center; 
             padding: 20px;
         }
@@ -53,8 +53,8 @@
             padding: 10px 20px;
             border: none;
             width: 20vh;
-            height: 30px;
-            font-size: 10px;
+            height: 35px;
+            font-size: 12px;
             border-radius: 20px;
             cursor: pointer;
             transition: background-color 0.3s, box-shadow 1.5s;
@@ -77,21 +77,21 @@
 
         .text-content {
         flex: 1;
-        padding-right: 30px; 
-        margin-left: 10vh;
+        padding-right: 20px; 
+        margin-left: 8vh;
     }
 
         .Headers{
             font-weight: 700;
             font-family: 'Open Sans';
-            font-size: 25px;
+            font-size: 40px;
            
         }
 
         .main-text{
             font-weight: 400;
             font-family: 'Open Sans';
-            font-size: 12px;
+            font-size: 18px;
             
         }
         
@@ -99,10 +99,10 @@
         .pink-button {
             background-color: hsl(322, 79%, 77%);
             color: white;
-            font-size: 10px;
+            font-size: 12px;
             padding: 10px 20px;
             width: 23vh;
-            height: 30px;
+            height: 35px;
             border: none;
             border-radius: 20px;
             cursor: pointer;
@@ -116,29 +116,41 @@
 
         .mockup-img {
             display: inline-block; 
-            margin-left: 80vh;
+            margin-left: 70vh;
             vertical-align: top; 
             flex: 1;
-        }
+            transition: transform 3.5s ease;
+}
+
+.mockup-img img:hover {
+    transform: scale(1.05);
+}
 
         .grow-together {
         width: 65%;
         margin: 90px auto;
         margin-bottom: 20px;
-        height: 200px;
+        height: 300px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        background-color: white; 
+        border-radius: 10px;
+        transition: transform 3.5s ease;
+}
+
+.grow-together img:hover {
+    transform: scale(1.5);
+}
+
+
+    .conversations, .users {
+        width: 65%;
+        margin: 20px auto;
+        height: 300px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
         background-color: white; 
         border-radius: 10px;
     }
 
-    .conversations, .users {
-        width: 65%;
-        margin: 20px auto;
-        height: 200px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-        background-color: white; 
-        border-radius: 10px;
-    }
 
     
     .grow-together, .user-together {
@@ -150,7 +162,7 @@
     .grow-content, .user-content {
         flex: 1;
         padding-right: 30px;
-        margin-top: 20px;
+        margin-top: 30px;
         margin-left: 40px;
        
     }
@@ -158,24 +170,37 @@
     .content-Headers, .user-Headers{
         font-weight: 700;
          font-family: 'Open Sans';
-        font-size: 18px;
+        font-size: 40px;
         margin-left: 30px;
     }
 
     .content-text, .user-text {
         font-weight: 400;
         font-family: 'Open Sans';
-        font-size: 14px;
+        font-size: 18px;
         color: #949393;
         margin-left: 30px;
+    }
+
+    .user-content {
+        margin-top: 80px;
     }
         
     .grow-img, .users-img{
         display: inline-block; 
         margin-right: -70vh;
-        margin-top: 5vh;
+        margin-top: 7vh;
         flex: 1;
     }
+
+    .users-img{
+        transition: transform 3.5s ease;
+}
+
+.users-img img:hover {
+    transform: scale(1.5);
+}
+        
 
     .conversations {
         display: flex;
@@ -186,7 +211,12 @@
         display: inline-block; 
         margin-left: 10vh;
         flex: 1;
-    }
+        transition: transform 3.5s ease;
+}
+
+.flowing-img img:hover {
+    transform: scale(1.5);
+}
      
 
     .conv-content {
@@ -197,14 +227,14 @@
     .conv-Headers {
         font-weight: 700;
          font-family: 'Open Sans';
-        font-size: 18px;
+        font-size: 40px;
         margin-left: 30px;
     }
         
     .conv-text {
         font-weight: 400;
         font-family: 'Open Sans';
-        font-size: 14px;
+        font-size: 18px;
         color: #949393;
         margin-left: 30px;
     }
@@ -244,7 +274,7 @@
     .comm-text {
     font-weight: 700;
     font-family: 'Open Sans';
-    font-size: 18px; 
+    font-size: 25px; 
     text-align: center; 
 }
 
@@ -263,11 +293,14 @@
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.171); 
             margin-left: 25vh;
             margin-top: 20px;
-        }
+            transition: transform 3.5s ease;
+    }
 
         .pink-button-2:hover {
             background-color: hsl(322, 78%, 53%); 
+            transform: scale(1.05);
         }
+        
 
         .button-bar {
             background-color: hsl(192, 100%, 9%);
@@ -355,16 +388,16 @@
         <span class="logo">
             <img src="images/logo.svg" alt="Logo" width="100" height="18">
         </span>
-        <button class="try-free">Try it Free</button>
+        <button class="try-free"><b>Try it Free</b></button>
     </div>
         <div class="nav-content">
             <div class="text-content">
             <h class="Headers">Build The Community <br>Your Fans Will Love</h>
-            <p class="main-text">Huddle re-imagines the way we build communities. You have <br>a voice, but so does your audience. Create connections with <br> your users as you engage in genuine discussion.</p>
+            <p class="main-text">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.</p>
             <button class="pink-button">Get Started For Free</button>
              </div>
              <div class="mockup-img">
-        <img src="images/illustration-mockups.svg" alt="mockups" width="300" height="220">
+        <img src="images/illustration-mockups.svg" alt="mockups" width="400" height="320">
                 </div>     
     </div>
      </div>
